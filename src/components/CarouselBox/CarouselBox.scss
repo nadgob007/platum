@@ -1,0 +1,33 @@
+@use '../../index.scss' as i;
+
+.CarouselBox {
+    height: 587px;
+
+    .carousel-title {
+        position: absolute;
+        z-index: 1;
+        top: 130px;
+        left: calc(61%);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 392px;
+
+        h1 {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+
+    .carousel-item {
+        height: 587px;
+        width: 100%;
+
+        img {
+            width: 100%;
+            height: 587px;
+            object-fit: cover;
+            object-position: 50% 50%;
+        }
+    }
+}
