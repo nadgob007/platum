@@ -1,14 +1,12 @@
 .Article {
-    width: 529px;
+    width: 500px;
     height: 644px;
 
     display: flex;
     flex-direction: column;
 
     .paper {
-        width: 529px;
         height: 468px;
-
     }
 
     .detail {
@@ -23,6 +21,16 @@
             display: flex;
             justify-content: center;
             align-items: center;
+
+            svg {
+                height: 72px;
+                color: #80868a;
+                transition: 0.2s;
+                
+                &:hover {
+                    color: red;
+                }
+            }
         }
 
         .description {

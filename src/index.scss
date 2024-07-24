@@ -1,34 +1,33 @@
-$grey: rgb(85,85,85);
-$red: rgb(252,0,0);
-$white: #ffffff;
-
-:root{ 
-  --primary-font: normal normal normal 28px/1.38em brandon-grot-w01-light, brandon-grot-w05-light, sans-serif;
+:root {
+  --primary-font: normal normal normal 28px/1.38em brandon-grot-w01-light,
+    brandon-grot-w05-light, sans-serif;
+  --grey: rgb(85, 85, 85);
+  --red: rgb(252, 0, 0);
+  --white: #ffffff;
 }
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
   h1 {
-    font: 88px/1.2em brandon-grot-w01-light, brandon-grot-w05-light,sans-serif;
+    font: 88px/1.2em brandon-grot-w01-light, brandon-grot-w05-light, sans-serif;
     font-size: 36px;
-    color: $red;
+    color: var(--red);
   }
 
   p {
-    color: $grey;
+    color: var(--grey);
     font-size: 19px;
     line-height: 1.8em;
   }
-  
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }

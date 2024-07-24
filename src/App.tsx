@@ -1,24 +1,26 @@
-import './App.scss';
+import "./App.scss";
 
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import { Header } from './components/Header/Header';
-import { Footer } from './components/Footer/Footer';
-import { About, Contacts, Home, ProductCatalog } from './pages';
+import { Header } from "./components/Header/Header";
+import { Footer } from "./components/Footer/Footer";
+import { About, Contacts, Home, ProductCatalog } from "./pages";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
 function App() {
   return (
     <div className="App">
       <main>
         <BrowserRouter>
-          <Header/>
-            <Routes>
-              <Route path='/' element={<Home />}/>
-              <Route path='/ProductCatalog' element={<ProductCatalog/>}/>
-              <Route path='/contacts' element={<Contacts />}/>
-              <Route path='/about' element={<About />}/>
-            </Routes>
-          <Footer/>
+          <Header />
+          <ScrollToTop />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/ProductCatalog" element={<ProductCatalog />} />
+            <Route path="/contacts" element={<Contacts />} />
+            <Route path="/about" element={<About />} />
+          </Routes>
+          <Footer />
         </BrowserRouter>
       </main>
     </div>

@@ -1,0 +1,370 @@
+.ProductCatalog {
+  .window {
+    height: 300px;
+
+    .banner1,
+    .banner2 {
+      width: 100%;
+      background-color: white;
+      transform: translate3d(0px, 0px, 0px);
+      z-index: -1;
+
+      img {
+        width: 100%;
+        height: 953px;
+        object-fit: cover;
+        position: relative;
+      }
+
+      &.inView {
+        top: 107px;
+        position: fixed;
+      }
+    }
+  }
+
+  .ProductCatalog-header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("../../assets/images/wave.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 600px;
+
+    .ProductCatalog-title {
+      position: absolute;
+      z-index: 1;
+      top: 130px;
+      left: calc(61%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      width: 392px;
+
+      p {
+        color: #ffffff;
+      }
+
+      h1 {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }
+  }
+
+  .aboutTechnology {
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 94px calc((100% - 980px) * 0.5);
+    text-align: justify;
+    background-color: rgba(213, 213, 213, 1);
+
+    p {
+      font-size: 18px;
+    }
+  }
+
+  .KeyBenefits {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--white);
+
+    h1 {
+      margin-top: 59px;
+    }
+
+    .Benefits {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      padding: 36px 0 55px;
+      background-color: rgba(213, 213, 213, 1);
+
+      .Benefit {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        text-align: center;
+
+        p {
+          color: #06477e;
+        }
+
+        img {
+          width: 80px;
+          height: 80px;
+        }
+      }
+    }
+  }
+
+  .ApplicationArea {
+    height: 650px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--white);
+    padding: 28px 110px 19px;
+
+    h1 {
+      margin-top: 0;
+    }
+
+    .ApplicationArea-title {
+      margin-bottom: 21px;
+      font-size: 18px;
+    }
+
+    .areas {
+      display: flex;
+      align-items: center;
+      text-align: right;
+      gap: 50px;
+
+      .right {
+        display: flex;
+        flex-direction: column;
+        gap: 55px;
+      }
+
+      .left {
+        text-align: left;
+        align-self: center;
+      }
+
+      .text {
+        max-width: 255px;
+
+        .step {
+          font-size: 26px;
+          color: #06477e;
+        }
+
+        p {
+          margin: 0;
+        }
+      }
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+
+      min-width: 367px;
+      max-height: 447px;
+    }
+  }
+
+  .HeatGenerating {
+    width: 100%;
+    min-height: 656px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    background-color: rgba(213, 213, 213, 1);
+    padding: 60px;
+
+    .reagent-img {
+      width: 100%;
+      max-width: 718px;
+      display: flex;
+      justify-content: center;
+
+      background-image: url("../../assets/images/yellowTubeFull.png");
+      background-size: cover;
+
+      img {
+        display: flex;
+        max-width: 100%;
+        height: auto;
+
+        min-width: 419px;
+        max-height: 536px;
+      }
+    }
+
+    .reagent {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      background-color: #ffffff;
+      padding: 15px 15px 0 15px;
+
+      .reagent-title {
+        max-width: 640px;
+        padding: 30px 0 49px;
+
+        h2 {
+          margin-bottom: 10px;
+          color: #06477e;
+        }
+
+        h1 {
+          margin: 0;
+        }
+      }
+
+      .reagent-text {
+        text-align: justify;
+
+        p {
+          max-width: 640px;
+          font-size: 16px;
+          line-height: 1.5em;
+        }
+      }
+    }
+  }
+
+  .IncreasedOilAmount {
+    min-height: 657px;
+    padding: 67px 80px 56px;
+    position: relative;
+
+    background-color: rgba(213, 213, 213, 1);
+
+    img {
+      position: absolute;
+      top: 67px;
+      right: 80px;
+
+      height: 350px;
+      width: calc(calc(100% - 160px) * 0.65);
+    }
+
+    .text-background {
+      height: 466px;
+      width: calc(calc(100% - 160px) * 0.65);
+
+      position: absolute;
+      bottom: 56px;
+      left: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      // padding: 0px calc((100% - 1200px) * 0.5) 21px calc((100% - 1200px) * 0.5);
+      background-color: #ffffff;
+
+      .text {
+        width: 620px;
+
+        h1 {
+          margin-bottom: 24px;
+        }
+
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 24px;
+
+          padding-left: 0;
+          margin: 0;
+
+          li {
+            color: rgb(85, 85, 85);
+            list-style-type: none;
+            text-align: justify;
+          }
+
+          li:before {
+            content: "- ";
+          }
+        }
+      }
+    }
+  }
+
+  .AdditionalMaterials {
+    .title {
+      height: 150px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #ffffff;
+      padding: 31px 0 23px;
+
+      p {
+        font-size: 18px;
+      }
+    }
+
+    .materials {
+      display: flex;
+
+      .presentation {
+        background-image: url("../../assets/images/presentation.jpg");
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .article {
+        background-image: url("../../assets/images/article.jpg");
+      }
+
+      .presentation,
+      .article {
+        position: relative;
+        background-size: cover;
+        width: 100%;
+        height: 600px;
+
+        .text {
+          position: absolute;
+          left: 60px;
+          bottom: 160px;
+          color: #ffffff;
+
+          p {
+            width: 380px;
+
+            color: #FAFAFA;
+            font-size: 16px;
+            line-height: 1.41em;
+            text-shadow: rgba(0, 0, 0, 0.498039) -1px -1px 0px, rgba(0, 0, 0, 0.498039) -1px 1px 0px, rgba(0, 0, 0, 0.498039) 1px 1px 0px, rgba(0, 0, 0, 0.498039) 1px -1px 0px;
+          }
+
+          h3 {
+            font-weight: 400;
+            margin-bottom: 40px;
+          }
+
+          .button-download {
+            width: fit-content;
+            height: 45px;
+            padding: 0 42px;
+
+            display: flex;
+            align-items: center;
+            
+            text-align: center;
+
+            color: #ffffff;
+            background-color: transparent;
+            border: 1px solid #ffffff;
+            border-radius: 30px;
+            
+            transition: .4s ease 0s;
+            cursor: pointer;
+
+            &:hover {
+
+              background-color: #FAFAFA;
+              color: #555555;
+            }
+          }
+        }
+      }
+    }
+  }
+}
