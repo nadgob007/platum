@@ -328,10 +328,13 @@
           p {
             width: 380px;
 
-            color: #FAFAFA;
+            color: #fafafa;
             font-size: 16px;
             line-height: 1.41em;
-            text-shadow: rgba(0, 0, 0, 0.498039) -1px -1px 0px, rgba(0, 0, 0, 0.498039) -1px 1px 0px, rgba(0, 0, 0, 0.498039) 1px 1px 0px, rgba(0, 0, 0, 0.498039) 1px -1px 0px;
+            text-shadow: rgba(0, 0, 0, 0.498039) -1px -1px 0px,
+              rgba(0, 0, 0, 0.498039) -1px 1px 0px,
+              rgba(0, 0, 0, 0.498039) 1px 1px 0px,
+              rgba(0, 0, 0, 0.498039) 1px -1px 0px;
           }
 
           h3 {
@@ -339,28 +342,31 @@
             margin-bottom: 40px;
           }
 
-          .button-download {
-            width: fit-content;
-            height: 45px;
-            padding: 0 42px;
-
-            display: flex;
-            align-items: center;
+          .download {
+            text-decoration: none;
             
-            text-align: center;
+            .button-download {
+              width: fit-content;
+              height: 45px;
+              padding: 0 42px;
 
-            color: #ffffff;
-            background-color: transparent;
-            border: 1px solid #ffffff;
-            border-radius: 30px;
-            
-            transition: .4s ease 0s;
-            cursor: pointer;
+              display: flex;
+              align-items: center;
 
-            &:hover {
+              text-align: center;
 
-              background-color: #FAFAFA;
-              color: #555555;
+              color: #ffffff;
+              background-color: transparent;
+              border: 1px solid #ffffff;
+              border-radius: 30px;
+
+              transition: 0.4s ease 0s;
+              cursor: pointer;
+
+              &:hover {
+                background-color: #fafafa;
+                color: #555555;
+              }
             }
           }
         }

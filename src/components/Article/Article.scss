@@ -1,42 +1,43 @@
 .Article {
-    width: 500px;
-    height: 644px;
+  width: 500px;
+  height: 644px;
 
+  display: flex;
+  flex-direction: column;
+
+  .paper {
+    height: 468px;
+  }
+
+  .detail {
     display: flex;
-    flex-direction: column;
+    padding: 18px 35px 49px 35px;
+    width: 100%;
+    height: 176px;
+    gap: 35px;
+    background-color: rgba(213, 213, 213, 0.8);
 
-    .paper {
-        height: 468px;
+    .download {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      svg {
+        height: 72px;
+        color: #80868a;
+        transition: 0.2s;
+
+        &:hover {
+          color: red;
+        }
+      }
     }
 
-    .detail {
-        display: flex;
-        padding: 18px 35px 49px 35px;
-        width: 100%;
-        height: 176px;
-        gap: 35px;
-        background-color: rgba(213,213,213, 0.8);
-        
-        .download {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            svg {
-                height: 72px;
-                color: #80868a;
-                transition: 0.2s;
-                
-                &:hover {
-                    color: red;
-                }
-            }
-        }
-
-        .description {
-            text-align: justify;
-            color: rgb(85,85,85);
-            font: normal normal normal 15px/1.875em avenir-lt-w01_35-light1475496, avenir-lt-w05_35-light, sans-serif;
-        }
+    .description {
+      text-align: justify;
+      color: rgb(85, 85, 85);
+      font: normal normal normal 15px/1.875em avenir-lt-w01_35-light1475496,
+        avenir-lt-w05_35-light, sans-serif;
     }
+  }
 }

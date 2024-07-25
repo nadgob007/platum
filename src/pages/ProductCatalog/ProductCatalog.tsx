@@ -9,17 +9,13 @@ import drop from "../../assets/icons/drop.png";
 import car from "../../assets/icons/car.png";
 
 import oil from "../../assets/images/oil.jpg";
-import yellowTube from "../../assets/images/yellowTube.png";
-import yellowTubeFull from "../../assets/images/yellowTubeFull.png";
 
 import drops from "../../assets/images/drops.jpg";
 import { useInView } from "react-intersection-observer";
 import tank from "../../assets/images/tank.jpg";
 
-import q from "../../assets/images/presentation.jpg";
-
 export const ProductCatalog = () => {
-  document.title = `ТХВ РС | PLATUM`
+  document.title = `ТХВ РС | PLATUM`;
   const { ref, inView } = useInView({
     threshold: 0,
   });
@@ -234,7 +230,9 @@ export const ProductCatalog = () => {
                 трудноизвлекаемыми запасами.
               </p>
               <h3>Презентация</h3>
-              <div className="button-download">Скачать</div>
+              <a className="download" href={"./presentation.pdf"} download>
+                <div className="button-download">Скачать</div>
+              </a>
             </div>
           </div>
 
@@ -246,7 +244,9 @@ export const ProductCatalog = () => {
                 природного битума
               </p>
               <h3>Статья</h3>
-              <div className="button-download">Скачать</div>
+              <a className="download" href={"./paper.pdf"} download>
+                <div className="button-download">Скачать</div>
+              </a>
             </div>
           </div>
         </div>
