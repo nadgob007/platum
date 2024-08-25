@@ -118,7 +118,7 @@ export const ProductCatalog = () => {
         </div>
 
         <div className="areas">
-          <div className="right">
+          <div className="left">
             <div className="text">
               <div className="step">1</div>
               <p>
@@ -137,12 +137,14 @@ export const ProductCatalog = () => {
 
           <img src={oil} alt={"битуминозная нефть"}></img>
 
-          <div className="left text">
-            <div className="step">2</div>
-            <p>
-              Регулирование процесса разработки и повышение нефтеотдачи
-              неоднородных по проницаемости пластов
-            </p>
+          <div className="right">
+            <div className="text">
+              <div className="step">2</div>
+              <p>
+                Регулирование процесса разработки и повышение нефтеотдачи
+                неоднородных по проницаемости пластов
+              </p>
+            </div>
           </div>
         </div>
       </div>

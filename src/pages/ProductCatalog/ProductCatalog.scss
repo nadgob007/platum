@@ -128,15 +128,21 @@
       text-align: right;
       gap: 50px;
 
-      .right {
+      .left {
         display: flex;
         flex-direction: column;
         gap: 55px;
       }
 
-      .left {
+      .right {
         text-align: left;
         align-self: center;
+
+        .text {
+          animation: appear-r linear;
+          animation-timeline: view();
+          animation-range: entry 0 cover 40%;
+        }
       }
 
       .text {
@@ -150,6 +156,10 @@
         p {
           margin: 0;
         }
+
+        animation: appear linear;
+        animation-timeline: view();
+        animation-range: entry 0 cover 40%;
       }
     }
 
@@ -344,7 +354,7 @@
 
           .download {
             text-decoration: none;
-            
+
             .button-download {
               width: fit-content;
               height: 45px;
@@ -372,5 +382,27 @@
         }
       }
     }
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateX(-400px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes appear-r {
+  from {
+    opacity: 0;
+    transform: translateX(400px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
   }
 }
