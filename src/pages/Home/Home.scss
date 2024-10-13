@@ -1,173 +1,138 @@
 .Home {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  .divider-scroll-img {
+    height: 249px;
+  }
+
+  .Technology {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 40px;
+    z-index: 1;
+    background-color: var(--white);
+
+    &__wave {
+      width: 100%;
+      height: 100%;
+
+      svg {
+        top: 0;
+        width: 100%;
+        min-height: 150px;
+        color: var(--gray-icon);
+        transform: rotate(180deg) scaleX(-1);
+      }
+    }
+
+    &__text {
+      width: 520px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      gap: 47px;
+      margin-bottom: 28px;
+      text-align: center;
+    }
+  }
+
+  .OilRecovery {
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    padding: 42px 80px 65px 80px;
+
+    z-index: 1;
+    background-color: var(--white);
+
+    &__text {
+      width: 588px;
+
+      h2 {
+        margin: 12px 0 14px 0;
+        color: var(--secondary);
+      }
+
+      h1 {
+        margin-bottom: 17px;
+      }
+
+      p {
+        margin-bottom: 58px;
+      }
+
+      button {
+        width: 236px;
+        height: 43px;
+        background: var(--grey);
+
+        &:hover {
+          background: rgb(100, 138, 218);
+        }
+      }
+    }
+
+    &__img {
+      width: 639px;
+      height: 468px;
+
+      img {
+        width: 639px;
+        height: 468px;
+        object-fit: cover;
+      }
+    }
+
+    @media (max-width: 980px) {
+    }
+  }
+
+  .trucks {
+    img {
+      height: 279px;
+      width: 100%;
+      object-fit: cover;
+      position: relative;
+    }
+  }
+
+  .Articles {
     position: relative;
     display: flex;
     flex-direction: column;
-
-    .window {
-        height: 249px;
-        
-        .banner1, .banner2 {
-            width: 100%;
-            background-color: white;
-            transform: translate3d(0px, 0px, 0px);
-            z-index: -1;
-
-            img {
-                width: 100%;
-                height: 953px;
-                object-fit: cover;
-                position: relative;
-            }
-
-            &.inView {
-                top: 0px;
-                position: fixed;
-            }
-        }
-    }
-
-    .wrap-Technology {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        gap: 40px;
-        z-index: 1;
-        background-color: white;
-
-        .wave-Technology{
-            width: 100%;
-            height: 100%;
-        
-            svg {
-                color: #AAAAAA;
-                top: 0;
-                min-height: 150px;
-                width: 100%;
-                transform: rotate(180deg) scaleX(-1);
-            }
-        }
-
-        .newTechnology {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 47px;
-            width: 520px; 
-
-            p {
-                text-align: center;
-                margin-bottom: 28px;
-            }
-        }
-    }
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     
-    .wrap {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        padding: 42px 80px 65px 80px;
-        
-        z-index: 1;
-        background-color: white;
+    padding: 46px 0 45px;
 
-        .oilRecovery {
-            display: flex;
-            justify-content: space-between;
-            width: 100%;
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0.4),
+        rgba(255, 255, 255, 0.4)
+      ),
+      url(../../assets/images/molecules.jpeg);
+    background-size: cover;
 
-            .oilRecovery-text {
-                width: 588px;
-                
-                h2 {
-                    margin: 12px 0 14px 0;
-                    color: #06477e;
-                }
-
-                h1 {
-                    margin-bottom: 17px;
-                }
-
-                p {
-                    margin-bottom: 58px;
-                }
-
-                button {
-                    width: 236px;
-                    height: 43px;
-                    padding: 0;
-                    border: none;
-                    background: var(--grey);
-                    cursor: pointer;
-                    transition: all 0.2s ease, visibility 0s;
-
-                    touch-action: manipulation;
-
-                    letter-spacing: 0.1em;
-                    color: var(--white);
-                    font-family: avenir-lt-w01_35-light1475496,avenir-lt-w05_35-light,sans-serif;
-                    font-size: 20px;
-
-                    &:hover {
-                        background: rgb(100, 138, 218);
-                    }
-                }
-            }
-
-            .oilRecovery-img {
-                width: 639px;
-                height: 468px;
-
-                img {
-                    width: 639px;
-                    height: 468px;
-                    object-fit:cover;
-                }
-            }
-            
-            @media(max-width: 980px) {
-
-            }
-        }
-
+    hr {
+      margin: 22px 0 30px;
     }
 
-    .trucks {
-        height: 279px;
-
-        img {
-            height: 100%;
-            width: 100%;
-        }
+    &__list {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 60px;
     }
-
-    .articles {
-        padding: 46px 0 45px;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        background-image: linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.4)), url(../../assets/images/molecules.jpeg);
-        background-size: cover;
-        position: relative;
-
-        hr {
-            margin: 40px 0 30px;
-            border-top: 2px solid #000000;
-            opacity: 1;
-        }
-        
-        .articles-content {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 60px;
-            margin-bottom: 10px;
-        }
-    }
+  }
 }

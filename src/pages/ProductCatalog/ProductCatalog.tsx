@@ -32,11 +32,9 @@ export const ProductCatalog = () => {
         </div>
       </div>
 
-      <div className="aboutTechnology">
+      <section className="aboutTechnology">
         <h1>Подробнее о технологии</h1>
-        <hr
-          style={{ height: "5px", width: "60px", color: "rgb(85, 85, 85)" }}
-        />
+        <hr className="grey-line"/>
         <p>
           Технология термохимического воздействия на пласт с использованием
           разогревающего состава представляет собой передовой метод обработки
@@ -52,25 +50,21 @@ export const ProductCatalog = () => {
           пластом, а также для регулирования процесса разработки и повышения
           нефтеотдачи неоднородных по проницаемости пластов.
         </p>
-      </div>
-
-      <section className="window">
-        <div className="banner1 inView">
-          <img src={TestTube} alt="пробирка"></img>
-        </div>
       </section>
 
-      <div className="KeyBenefits">
-        <h1>Ключевые преимущества</h1>
-        <hr
-          style={{
-            height: "5px",
-            width: "60px",
-            color: "rgb(85, 85, 85)",
-            marginBottom: 36,
-          }}
-        />
+      <div className="divider-scroll-img">
+        <div className="banner banner-inView">
+          <img src={TestTube} alt="пробирка"></img>
+        </div>
+      </div>
 
+      <section className="KeyBenefits">
+        <h1>Ключевые преимущества</h1>
+        <hr className="grey-line" />
+
+        {
+          // TODO: Benefit вынести в отдельный компонент
+        }
         <div className="Benefits">
           <div className="Benefit">
             <img src={worker} alt="мужчина"></img>
@@ -100,18 +94,11 @@ export const ProductCatalog = () => {
             <p>Не обводняет пласт</p>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div className="ApplicationArea">
+      <section className="ApplicationArea">
         <h1>Область применения ТХВ РС</h1>
-        <hr
-          style={{
-            height: "5px",
-            width: "60px",
-            color: "rgb(85, 85, 85)",
-            marginBottom: 36,
-          }}
-        />
+        <hr className="grey-line" />
 
         <div className="ApplicationArea-title">
           Месторождения высоковязкой и битуминозной нефти, где необходимо:
@@ -147,9 +134,9 @@ export const ProductCatalog = () => {
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div className="HeatGenerating">
+      <section className="HeatGenerating">
         <div className="reagent-img">
           {/* <img src={yellowTubeFull} alt="теплогенерирующая композиция" /> */}
         </div>
@@ -178,15 +165,15 @@ export const ProductCatalog = () => {
             </p>
           </div>
         </div>
-      </div>
-
-      <section ref={ref} className="window">
-        <div className={`banner2 ${inView ? "inView" : ""}`}>
-          {inView && <img src={drops} alt="капли"></img>}
-        </div>
       </section>
 
-      <div className="IncreasedOilAmount">
+      <div className="divider-scroll-img" ref={ref}>
+        <div className={`banner ${inView ? "banner-inView" : ""}`}>
+          {inView && <img src={drops} alt="капли"></img>}
+        </div>
+      </div>
+
+      <section className="IncreasedOilAmount">
         <img src={tank} alt="нефтянная цистерна" />
 
         <div className="text-background">
@@ -215,11 +202,12 @@ export const ProductCatalog = () => {
             </ul>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div className="AdditionalMaterials">
+      <section className="AdditionalMaterials">
         <div className="title">
           <h1>Дополнительные материалы</h1>
+          <hr className="grey-line" />
           <p>для ознакомления</p>
         </div>
 
@@ -252,7 +240,7 @@ export const ProductCatalog = () => {
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 };

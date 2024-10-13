@@ -1,8 +1,12 @@
 :root {
   --primary-font: normal normal normal 28px/1.38em brandon-grot-w01-light,
     brandon-grot-w05-light, sans-serif;
-  --grey: rgb(85, 85, 85);
+
   --red: rgb(252, 0, 0);
+  --secondary: #06477e;
+
+  --grey: rgb(85, 85, 85);
+  --gray-icon: #aaaaaa;
   --white: #ffffff;
 }
 
@@ -24,6 +28,48 @@ body {
     color: var(--grey);
     font-size: 19px;
     line-height: 1.8em;
+  }
+
+  button {
+    border: none;
+    padding: 0;
+
+    color: var(--white);
+    font-size: 20px;
+    font-family: avenir-lt-w01_35-light1475496, avenir-lt-w05_35-light,
+      sans-serif;
+    letter-spacing: 0.1em;
+
+    cursor: pointer;
+    touch-action: manipulation;
+    transition: all 0.2s ease, visibility 0s;
+  }
+
+  .grey-line {
+    height: 5px;
+    width: 60px;
+    color: var(--grey);
+  }
+
+  .divider-scroll-img {
+    .banner {
+      width: 100%;
+      background-color: var(--white);
+      transform: translate3d(0px, 0px, 0px);
+      z-index: -1;
+
+      img {
+        width: 100%;
+        height: 953px;
+        object-fit: cover;
+        position: relative;
+      }
+
+      &-inView {
+        top: 0px;
+        position: fixed;
+      }
+    }
   }
 }
 
