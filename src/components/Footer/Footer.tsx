@@ -12,6 +12,7 @@ export const Footer = () => {
     <footer className="Footer">
       <div className="detail">
         <div className="column1">
+
           <div className="siteSections">
             <h2 className="title">Разделы сайта</h2>
             <div className="sections">
@@ -33,17 +34,17 @@ export const Footer = () => {
               </NavLink>
             </div>
           </div>
+
           <div className="contacts">
             <h2 className="title">Контактная информация</h2>
             <p>
-              Россия, 443081, г. Самара, улица Советской Армии, дом 185, офис 23
+              Адрес: Россия, 443081, г. Самара, улица Советской Армии, дом 185, офис 23
             </p>
             <p>
-              <span>Почта: info@pla2m.ru</span>
-              <div></div>
-              <span>
-                Номер телефона: <a href="tel:+78469720222">8 (846) 972-02-22</a>
-              </span>
+              Почта: info@pla2m.ru
+            </p>
+            <p>
+              Номер телефона: <a href="tel:+78469720222">8 (846) 972-02-22</a>
             </p>
           </div>
         </div>

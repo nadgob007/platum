@@ -55,20 +55,20 @@
         justify-self: center;
         gap: 28px;
 
-        p {
-          font-size: 16px;
-        }
-
         .title {
           white-space: nowrap;
         }
 
-        a {
-          color: #ffffff;
-          text-decoration: none;
+        p {
+          font-size: 16px;
 
-          &:hover {
-            text-decoration: underline;
+          a {
+            color: #ffffff;
+            text-decoration: none;
+  
+            &:hover {
+              text-decoration: underline;
+            }
           }
         }
       }

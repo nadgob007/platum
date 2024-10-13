@@ -71,8 +71,8 @@ export const Home = () => {
         <hr style={{ height: "5px", width: "31px" }} />
 
         <div className="articles-content">
-          {PAPERS.map((item) => (
-            <Article article={item} />
+          {PAPERS.map((item, index) => (
+            <Article key={index} article={item} />
           ))}
         </div>
       </section>
