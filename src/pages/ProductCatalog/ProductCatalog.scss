@@ -41,7 +41,7 @@
     }
   }
 
-  .aboutTechnology {
+  .AboutTechnology {
     height: 600px;
     display: flex;
     flex-direction: column;
@@ -71,28 +71,11 @@
       margin-bottom: 36px;
     }
 
-    .Benefits {
+    .KeyBenefits-list {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       padding: 36px 0 55px;
       background-color: rgba(213, 213, 213, 1);
-
-      .Benefit {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        text-align: center;
-
-        p {
-          color: #06477e;
-        }
-
-        img {
-          width: 80px;
-          height: 80px;
-        }
-      }
     }
   }
 
@@ -172,7 +155,7 @@
     background-color: rgba(213, 213, 213, 1);
     padding: 60px;
 
-    .reagent-img {
+    .HeatGenerating-img {
       width: 100%;
       max-width: 718px;
       display: flex;
@@ -191,21 +174,21 @@
       }
     }
 
-    .reagent {
+    .HeatGenerating-text {
       width: 100%;
       display: flex;
       align-items: center;
       flex-direction: column;
-      background-color: #ffffff;
+      background-color: var(--white);
       padding: 15px 15px 0 15px;
 
-      .reagent-title {
+      .HeatGenerating-title {
         max-width: 640px;
         padding: 30px 0 49px;
 
         h2 {
           margin-bottom: 10px;
-          color: #06477e;
+          color: var(--secondary);
         }
 
         h1 {
@@ -213,7 +196,7 @@
         }
       }
 
-      .reagent-text {
+      .HeatGenerating-description {
         text-align: justify;
 
         p {

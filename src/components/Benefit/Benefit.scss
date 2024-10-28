@@ -1,0 +1,16 @@
+.Benefit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+
+  p {
+    color: #06477e;
+  }
+
+  img {
+    width: 80px;
+    height: 80px;
+  }
+}

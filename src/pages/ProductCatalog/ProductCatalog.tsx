@@ -1,18 +1,12 @@
-import "./ProductCatalog.scss";
-import TestTube from "../../assets/images/testTube.jpg";
-
-import worker from "../../assets/icons/worker.png";
-import tube from "../../assets/icons/tube.png";
-import tube2 from "../../assets/icons/tube2.png";
-import rig from "../../assets/icons/rig.png";
-import drop from "../../assets/icons/drop.png";
-import car from "../../assets/icons/car.png";
-
-import oil from "../../assets/images/oil.jpg";
-
-import drops from "../../assets/images/drops.jpg";
 import { useInView } from "react-intersection-observer";
+import { Benefit, BENEFITS } from "../../components/Benefit/Benefit";
+
+import TestTube from "../../assets/images/testTube.jpg";
+import oil from "../../assets/images/oil.jpg";
+import drops from "../../assets/images/drops.jpg";
 import tank from "../../assets/images/tank.jpg";
+
+import "./ProductCatalog.scss";
 
 export const ProductCatalog = () => {
   document.title = `ТХВ РС | PLATUM`;
@@ -32,9 +26,9 @@ export const ProductCatalog = () => {
         </div>
       </div>
 
-      <section className="aboutTechnology">
+      <section className="AboutTechnology">
         <h1>Подробнее о технологии</h1>
-        <hr className="grey-line"/>
+        <hr className="grey-line" />
         <p>
           Технология термохимического воздействия на пласт с использованием
           разогревающего состава представляет собой передовой метод обработки
@@ -62,37 +56,10 @@ export const ProductCatalog = () => {
         <h1>Ключевые преимущества</h1>
         <hr className="grey-line" />
 
-        {
-          // TODO: Benefit вынести в отдельный компонент
-        }
-        <div className="Benefits">
-          <div className="Benefit">
-            <img src={worker} alt="мужчина"></img>
-            <p>Бесподходный метод</p>
-          </div>
-          <div className="Benefit">
-            <img src={tube} alt="пробирка"></img>
-            <p>
-              Энергетическая способность состава при его разложении составляет
-              от 2х до 6 МДж/кг
-            </p>
-          </div>
-          <div className="Benefit">
-            <img src={tube2} alt="круглая пробирка"></img>
-            <p>Органические компоненты состава</p>
-          </div>
-          <div className="Benefit">
-            <img src={rig} alt="вышка"></img>
-            <p>Отсутствует выделение газа</p>
-          </div>
-          <div className="Benefit">
-            <img src={car} alt="машина"></img>
-            <p>Нет необходимости в откачке продуктов реакции</p>
-          </div>
-          <div className="Benefit">
-            <img src={drop} alt="капля"></img>
-            <p>Не обводняет пласт</p>
-          </div>
+        <div className="KeyBenefits-list">
+          {BENEFITS.map((benefit, index) => (
+            <Benefit key={index} benefit={benefit} />
+          ))}
         </div>
       </section>
 
@@ -137,15 +104,18 @@ export const ProductCatalog = () => {
       </section>
 
       <section className="HeatGenerating">
-        <div className="reagent-img">
+        {
+          // TODO: переделать отступы
+        }
+        <div className="HeatGenerating-img">
           {/* <img src={yellowTubeFull} alt="теплогенерирующая композиция" /> */}
         </div>
-        <div className="reagent">
-          <div className="reagent-title">
+        <div className="HeatGenerating-text">
+          <div className="HeatGenerating-title">
             <h2>ТЕПЛОГЕНЕРИРУЮЩАЯ КОМПОЗИЦИЯ</h2>
             <h1>ТХВ РЕАГЕНТ А</h1>
           </div>
-          <div className="reagent-text">
+          <div className="HeatGenerating-description">
             <p>
               ТХВ Реагент А является основным агентом в процессе обработки
               призабойной зоны посредством технологии ТХВ РС. Экзотермическая
