@@ -104,12 +104,7 @@ export const ProductCatalog = () => {
       </section>
 
       <section className="HeatGenerating">
-        {
-          // TODO: переделать отступы
-        }
-        <div className="HeatGenerating-img">
-          {/* <img src={yellowTubeFull} alt="теплогенерирующая композиция" /> */}
-        </div>
+        <div className="HeatGenerating-img"></div>
         <div className="HeatGenerating-text">
           <div className="HeatGenerating-title">
             <h2>ТЕПЛОГЕНЕРИРУЮЩАЯ КОМПОЗИЦИЯ</h2>
@@ -146,8 +141,8 @@ export const ProductCatalog = () => {
       <section className="IncreasedOilAmount">
         <img src={tank} alt="нефтянная цистерна" />
 
-        <div className="text-background">
-          <div className="text">
+        <div className="IncreasedOilAmount-text">
+          <div className="IncreasedOilAmount-description">
             <h1>Повышение нефтеодачи</h1>
             <ul>
               <li>
@@ -175,7 +170,7 @@ export const ProductCatalog = () => {
       </section>
 
       <section className="AdditionalMaterials">
-        <div className="title">
+        <div className="AdditionalMaterials-title">
           <h1>Дополнительные материалы</h1>
           <hr className="grey-line" />
           <p>для ознакомления</p>

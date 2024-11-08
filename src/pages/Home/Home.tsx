@@ -7,10 +7,11 @@ import stones from "../../assets/images/stones.jpg";
 import trucks from "../../assets/images/trucks.jpg";
 import { ReactComponent as Wave } from "../../assets/images/wave.svg";
 import { Article, PAPERS } from "../../components/Article";
+import { useNavigate } from "react-router-dom";
 
 export const Home = () => {
   document.title = `Главная | PLATUM`;
-
+  
   return (
     <div className="Home">
       <CarouselBox />
@@ -45,7 +46,7 @@ export const Home = () => {
             составом как способ увеличения нефтеотдачи пластов с
             трудноизвлекаемыми запасами.
           </p>
-          <button>Подробнее</button>
+          <button onClick={()=>{}}>Подробнее</button>
         </div>
         <div className="OilRecovery__img">
           <img src={blueSquer} alt="модель увеличения теплоотдачи" />

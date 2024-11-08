@@ -5,9 +5,9 @@ export const About = () => {
   document.title = `О нас | PLATUM`
   return (
     <div className="About">
-      <div className="aboutCompany">
+      <div className="About__text">
         <h1>О компании</h1>
-        <div className="text">
+        <div className="About__description">
           <p>
             ООО "ПЛАТУМ" – ваш надежный партнер в сфере увеличения нефтеотдачи
             пластов с трудноизвлекаемыми запасами. Мы являемся разработчиком и

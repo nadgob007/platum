@@ -19,7 +19,7 @@
       max-width: 247px;
 
       h2 {
-        color: #06477e;
+        color: var(--secondary);
         font-size: 26px;
         font-weight: 400;
       }
@@ -36,8 +36,9 @@
 
     iframe {
       height: 370px;
-      width: 980px;
+      width: 100%;
       border: 1px solid;
+      filter: grayscale(100%);
     }
   }
 }

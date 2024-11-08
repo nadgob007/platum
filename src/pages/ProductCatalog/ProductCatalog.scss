@@ -1,5 +1,4 @@
 .ProductCatalog {
-
   .divider-scroll-img {
     height: 300px;
 
@@ -66,7 +65,7 @@
     h1 {
       margin-top: 59px;
     }
-    
+
     .grey-line {
       margin-bottom: 36px;
     }
@@ -180,7 +179,7 @@
       align-items: center;
       flex-direction: column;
       background-color: var(--white);
-      padding: 15px 15px 0 15px;
+      padding: 15px;
 
       .HeatGenerating-title {
         max-width: 640px;
@@ -198,9 +197,9 @@
 
       .HeatGenerating-description {
         text-align: justify;
+        max-width: 640px;
 
         p {
-          max-width: 640px;
           font-size: 16px;
           line-height: 1.5em;
         }
@@ -224,7 +223,7 @@
       width: calc(calc(100% - 160px) * 0.65);
     }
 
-    .text-background {
+    .IncreasedOilAmount-text {
       height: 466px;
       width: calc(calc(100% - 160px) * 0.65);
 
@@ -236,9 +235,9 @@
       justify-content: center;
 
       // padding: 0px calc((100% - 1200px) * 0.5) 21px calc((100% - 1200px) * 0.5);
-      background-color: #ffffff;
+      background-color: var(--white);
 
-      .text {
+      .IncreasedOilAmount-description {
         width: 620px;
 
         h1 {
@@ -268,12 +267,11 @@
   }
 
   .AdditionalMaterials {
-    .title {
-      // height: 150px;
+    .AdditionalMaterials-title {
       display: flex;
       flex-direction: column;
       align-items: center;
-      background-color: #ffffff;
+      background-color: var(--white);
       padding: 31px 0 23px;
 
       p {
@@ -308,7 +306,7 @@
           position: absolute;
           left: 60px;
           bottom: 160px;
-          color: #ffffff;
+          color: var(--white);
 
           p {
             width: 380px;
@@ -328,20 +326,19 @@
 
           .download {
             text-decoration: none;
+            display: block;
+            width: fit-content;
 
             .button-download {
-              width: fit-content;
               height: 45px;
               padding: 0 42px;
 
               display: flex;
               align-items: center;
 
-              text-align: center;
-
-              color: #ffffff;
+              color: var(--white);
               background-color: transparent;
-              border: 1px solid #ffffff;
+              border: 1px solid var(--white);
               border-radius: 30px;
 
               transition: 0.4s ease 0s;
@@ -349,7 +346,7 @@
 
               &:hover {
                 background-color: #fafafa;
-                color: #555555;
+                color: var(--grey);
               }
             }
           }
