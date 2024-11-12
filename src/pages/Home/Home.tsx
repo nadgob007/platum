@@ -11,7 +11,8 @@ import { useNavigate } from "react-router-dom";
 
 export const Home = () => {
   document.title = `Главная | PLATUM`;
-  
+  const navigate = useNavigate();
+
   return (
     <div className="Home">
       <CarouselBox />
@@ -46,7 +47,7 @@ export const Home = () => {
             составом как способ увеличения нефтеотдачи пластов с
             трудноизвлекаемыми запасами.
           </p>
-          <button onClick={()=>{}}>Подробнее</button>
+          <button onClick={()=>navigate("/ProductCatalog")}>Подробнее</button>
         </div>
         <div className="OilRecovery__img">
           <img src={blueSquer} alt="модель увеличения теплоотдачи" />
