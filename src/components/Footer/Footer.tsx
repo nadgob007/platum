@@ -6,14 +6,12 @@ import { ContactUs } from "../ContactUs/ContactUs";
 import "./Footer.scss";
 
 export const Footer = () => {
-  
-
   return (
-    <footer className="Footer">
-      <div className="detail">
-        <div className="column1">
+    <footer>
+      <div className="columns">
+        <div className="navigation">
           <div className="siteSections">
-            <h2 className="title">Разделы сайта</h2>
+            <h2>Разделы сайта</h2>
             <div className="sections">
               <NavLink className="nav-link" to="/">
                 Главная
@@ -31,7 +29,7 @@ export const Footer = () => {
           </div>
 
           <div className="contacts">
-            <h2 className="title">Контактная информация</h2>
+            <h2>Контактная информация</h2>
             <p>
               Адрес: Россия, 443081, г. Самара, улица Советской Армии, дом 185,
               офис 23
@@ -43,8 +41,8 @@ export const Footer = () => {
           </div>
         </div>
         <ContactUs />
-        <div className="add">
-          <h2 className="title">Добавьте нас в контакты</h2>
+        <div className="addUs">
+          <h2>Добавьте нас в контакты</h2>
           <img className="qr-code" src={qrCode} alt="QR-code" />
           <p>
             *чтобы добавить нас в контакты наведите на этот qr-код камеру своего
@@ -56,7 +54,7 @@ export const Footer = () => {
               <img src={logoPlatumBlack} alt="Platum" />
               <img src={logoFasie} alt="Fasie" />
             </div>
-            <p className="btxt">
+            <p className="blue">
               Работа проводится компанией "Платум" при финансовой поддержке
               Фонда содействия инновациям
             </p>

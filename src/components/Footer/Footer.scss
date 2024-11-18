@@ -1,69 +1,56 @@
-.Footer {
-  background-color: rgb(47, 46, 46);
+footer {
+  background-color: var(--grey-dark);
   display: flex;
   justify-content: center;
   flex-direction: column;
 
   height: 596px;
   width: 100%;
-  color: white;
+  color: var(--white);
 
-  .detail {
+  .columns {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    justify-content: center;
-    padding: 23px 60px 0 60px;
-    width: 100%;
+    padding: 23px 60px 16px 60px;
 
     h2 {
+      text-align: center;
+      color: var(--light-blue);
       font: var(--primary-font);
+      font-size: 28px;
+      white-space: nowrap;
     }
 
     p {
-      color: #ffffff;
+      color: var(--white);
     }
 
-    .title,
-    .btxt {
-      color: #36aebf;
-      text-align: center;
-      font-size: 28px;
-    }
-
-    .column1 {
+    .navigation {
       display: flex;
       flex-direction: column;
-      justify-self: start;
       gap: 36px;
-      max-width: 328px;
+      max-width: 355px;
 
       .siteSections {
         display: flex;
         flex-direction: column;
         gap: 38px;
-        max-width: 328px;
 
         .nav-link:hover {
-          color: #36aebf;
+          color: var(--light-blue);
         }
       }
 
       .contacts {
-        width: 355px;
         display: flex;
         flex-direction: column;
-        justify-self: center;
         gap: 28px;
-
-        .title {
-          white-space: nowrap;
-        }
 
         p {
           font-size: 16px;
 
           a {
-            color: #ffffff;
+            color: var(--white);
             text-decoration: none;
 
             &:hover {
@@ -74,17 +61,13 @@
       }
     }
 
-    .add {
+    .addUs {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       justify-self: end;
       max-width: 328px;
-
-      .title {
-        white-space: nowrap;
-      }
 
       .qr-code {
         width: 240px;
@@ -104,9 +87,9 @@
         }
       }
 
-      .btxt {
-        display: flex;
-        text-align: start;
+      .blue {
+        color: var(--light-blue);
+        margin: 0;
       }
     }
   }
