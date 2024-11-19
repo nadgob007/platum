@@ -28,14 +28,14 @@
         transition: 0.2s;
 
         &:hover {
-          color: red;
+          color: var(--red);
         }
       }
     }
 
     .description {
       text-align: justify;
-      color: rgb(85, 85, 85);
+      color: var(--grey);
       font: normal normal normal 15px/1.875em avenir-lt-w01_35-light1475496,
         avenir-lt-w05_35-light, sans-serif;
     }
