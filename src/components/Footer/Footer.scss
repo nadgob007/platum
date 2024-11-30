@@ -1,5 +1,5 @@
 footer {
-  background-color: var(--grey-dark);
+  background-color: var(--gray-dark);
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -15,9 +15,9 @@ footer {
 
     h2 {
       text-align: center;
-      color: var(--light-blue);
-      font: var(--primary-font);
+      font-family: var(--font-family3);
       font-size: 28px;
+      color: var(--turquoise);
       white-space: nowrap;
     }
 
@@ -37,7 +37,7 @@ footer {
         gap: 38px;
 
         .nav-link:hover {
-          color: var(--light-blue);
+          color: var(--turquoise);
         }
       }
 
@@ -75,7 +75,7 @@ footer {
       }
 
       p {
-        font-family: bai jamjuree, sans-serif;
+        font-family: var(--font-family4);
         text-align: justify;
         font-size: 15px;
         line-height: 19px;
@@ -88,7 +88,7 @@ footer {
       }
 
       .blue {
-        color: var(--light-blue);
+        color: var(--turquoise);
         margin: 0;
       }
     }

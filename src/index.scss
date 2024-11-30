@@ -1,24 +1,39 @@
 :root {
-  --primary-font: normal normal normal 28px/1.38em brandon-grot-w01-light,
-    brandon-grot-w05-light, sans-serif;
+  // font-familys
+  --font-family1: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  --font-family2: avenir-lt-w01_35-light1475496, avenir-lt-w05_35-light,
+    sans-serif;
+  --font-family3: brandon-grot-w01-light, brandon-grot-w05-light, sans-serif;
+  --font-family4: bai jamjuree, sans-serif;
 
-  //font-family: bai jamjuree, sans-serif;
-
-  --red: rgb(252, 0, 0);
+  // colors
+  --primary: #fc0000;
   --secondary: #06477e;
 
-  --light-blue: #36aebf;
+  --turquoise: #36aebf;
+  --light-blue: #648ada;
 
-  --grey: #555555;
-  --grey-light: #808080;
-  --gray-icon: #aaaaaa;
+  --gray1: rgb(213, 213, 213);
+  --gray2: rgba(227, 227, 227, 0.788);
+  --gray3: rgb(170, 170, 170);
+  --gray4: rgba(255, 255, 255, 0.534);
+  --gray5: rgba(255, 255, 255, 0.4);
+  --gray6: rgba(213, 213, 213, 0.541);
+  --gray7: rgb(128, 134, 138);
+  --gray8: rgb(128, 128, 128);
 
-  --grey-dark: rgb(47, 46, 46);
+  --gray: #555555;
+  --gray-dark: #2f2e2e;
 
   --white: #ffffff;
-  --black: rgba(255, 255, 255, 0);
-}
+  --white2: #fafafa;
 
+  --black: rgb(0, 0, 0);
+  --black2: rgba(0, 0, 0, 0.13);
+  --black3: rgba(0, 0, 0, 0.5);
+}
 
 /*
   TODO:
@@ -32,20 +47,18 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: var(--font-family1);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
   h1 {
-    font: 88px/1.2em brandon-grot-w01-light, brandon-grot-w05-light, sans-serif;
+    font-family: var(--font-family3);
     font-size: 36px;
-    color: var(--red);
+    color: var(--primary);
   }
 
   p {
-    color: var(--grey);
+    color: var(--gray);
     font-size: 19px;
     line-height: 1.8em;
   }
@@ -56,8 +69,7 @@ body {
 
     color: var(--white);
     font-size: 20px;
-    font-family: avenir-lt-w01_35-light1475496, avenir-lt-w05_35-light,
-      sans-serif;
+    font-family: var(--font-family2);
     letter-spacing: 0.1em;
 
     cursor: pointer;
@@ -68,7 +80,7 @@ body {
   .grey-line {
     height: 5px;
     width: 60px;
-    color: var(--grey);
+    color: var(--gray);
   }
 
   .divider-scroll-img {
@@ -91,9 +103,4 @@ body {
       }
     }
   }
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
 }

@@ -26,7 +26,7 @@
         top: 0;
         width: 100%;
         min-height: 150px;
-        color: var(--gray-icon);
+        color: var(--gray3);
         transform: rotate(180deg) scaleX(-1);
       }
     }
@@ -74,10 +74,10 @@
       button {
         width: 236px;
         height: 43px;
-        background: var(--grey);
+        background-color: var(--gray);
 
         &:hover {
-          background: rgb(100, 138, 218);
+          background-color: var(--light-blue);
         }
       }
     }
@@ -113,12 +113,12 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    
+
     padding: 46px 0 45px;
 
     background-image: linear-gradient(
-        rgba(255, 255, 255, 0.4),
-        rgba(255, 255, 255, 0.4)
+        var(--gray4),
+        var(--gray5)
       ),
       url(../../assets/images/molecules.jpeg);
     background-size: cover;

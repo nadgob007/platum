@@ -64,13 +64,14 @@ export const ProductCatalog = () => {
       </section>
 
       <section className="ApplicationArea">
-        <h1>Область применения ТХВ РС</h1>
-        <hr className="grey-line" />
-
         <div className="ApplicationArea-title">
-          Месторождения высоковязкой и битуминозной нефти, где необходимо:
+          <h1>Область применения ТХВ РС</h1>
+          <hr className="grey-line" />
+          <div className="ApplicationArea-description">
+            Месторождения высоковязкой и битуминозной нефти, где необходимо:
+          </div>
         </div>
-
+        
         <div className="areas">
           <div className="left">
             <div className="text">
@@ -173,7 +174,9 @@ export const ProductCatalog = () => {
         <div className="AdditionalMaterials-title">
           <h1>Дополнительные материалы</h1>
           <hr className="grey-line" />
-          <p>для ознакомления</p>
+          <div className="AdditionalMaterials-description">
+            для ознакомления
+          </div>
         </div>
 
         <div className="materials">

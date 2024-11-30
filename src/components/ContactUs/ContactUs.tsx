@@ -83,9 +83,7 @@ export const ContactUs = () => {
           placeholder="Добавьте сообщение..."
           onChange={handleChange}
         />
-        <button type="submit">
-          <div className="submit-btn">Отправить</div>
-        </button>
+        <button type="submit">Отправить</button>
         {send && (
           <div
             className="notification"
