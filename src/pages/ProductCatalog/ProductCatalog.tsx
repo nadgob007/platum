@@ -71,36 +71,34 @@ export const ProductCatalog = () => {
             Месторождения высоковязкой и битуминозной нефти, где необходимо:
           </div>
         </div>
-        
+
         <div className="areas">
-          <div className="left">
-            <div className="text">
-              <div className="step">1</div>
-              <p>
-                Проведение работ по активации или возобновлению работы нефтяных
-                скважин
-              </p>
-            </div>
-            <div className="text">
-              <div className="step">3</div>
-              <p>
-                Реализация технологии на любом из типов коллектора продуктивного
-                пласта месторождения
-              </p>
-            </div>
+          <div className="text left-1">
+            <div className="step">1</div>
+            <p>
+              Проведение работ по активации или возобновлению работы нефтяных
+              скважин
+            </p>
+          </div>
+
+          <div className="text left-2">
+            <div className="step">3</div>
+            <p>
+              Реализация технологии на любом из типов коллектора продуктивного
+              пласта месторождения
+            </p>
           </div>
 
           <img src={oil} alt={"битуминозная нефть"}></img>
 
-          <div className="right">
-            <div className="text">
-              <div className="step">2</div>
-              <p>
-                Регулирование процесса разработки и повышение нефтеотдачи
-                неоднородных по проницаемости пластов
-              </p>
-            </div>
+          <div className="text right-3">
+            <div className="step">2</div>
+            <p>
+              Регулирование процесса разработки и повышение нефтеотдачи
+              неоднородных по проницаемости пластов
+            </p>
           </div>
+          
         </div>
       </section>
 

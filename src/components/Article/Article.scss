@@ -1,12 +1,12 @@
 .Article {
   width: 500px;
-  height: 644px;
+  max-height: 644px;
 
   display: flex;
   flex-direction: column;
 
   .paper {
-    height: 468px;
+    max-height: 468px;
   }
 
   .detail {
@@ -39,6 +39,21 @@
       line-height: 1.875em;
       color: var(--gray);
       text-align: justify;
+    }
+  }
+}
+
+
+@media (max-width: 1030px) {
+  .Article {
+    .paper {
+      width: 100%;
+      height: auto;
+    }
+
+    .detail {
+      height: auto;
+      padding: 9px 17px 24px 17px;
     }
   }
 }

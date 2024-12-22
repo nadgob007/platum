@@ -35,10 +35,39 @@
     width: 980px;
 
     iframe {
-      height: 370px;
+      height: 100%;
       width: 100%;
       border: 1px solid;
       filter: grayscale(100%);
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .Contacts {
+    .contactList {
+      margin-bottom: 20px;
+    }
+
+    .map {
+      width: 100%;
+      padding: 0 20px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .Contacts {
+    h1 {
+      margin-bottom: 66px;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .Contacts {
+    .contactList {
+      flex-direction: column;
     }
   }
 }

@@ -9,36 +9,33 @@ export const Footer = () => {
   return (
     <footer>
       <div className="columns">
-        <div className="navigation">
-          <div className="siteSections">
-            <h2>Разделы сайта</h2>
-            <div className="sections">
-              <NavLink className="nav-link" to="/">
-                Главная
-              </NavLink>
-              <NavLink className="nav-link" to="/ProductCatalog">
-                Технология ТХВ РС
-              </NavLink>
-              <NavLink className="nav-link" to="/contacts">
-                Контакты
-              </NavLink>
-              <NavLink className="nav-link" to="/about">
-                О нас
-              </NavLink>
-            </div>
-          </div>
-
-          <div className="contacts">
-            <h2>Контактная информация</h2>
-            <p>
-              Адрес: Россия, 443081, г. Самара, улица Губанова, дом 3
-            </p>
-            <p>Почта: info@pla2m.ru</p>
-            <p>
-              Номер телефона: <a href="tel:+78469720222">8 (846) 972-02-22</a>
-            </p>
+        <div className="siteSections">
+          <h2>Разделы сайта</h2>
+          <div className="sections">
+            <NavLink className="nav-link" to="/">
+              Главная
+            </NavLink>
+            <NavLink className="nav-link" to="/ProductCatalog">
+              Технология ТХВ РС
+            </NavLink>
+            <NavLink className="nav-link" to="/contacts">
+              Контакты
+            </NavLink>
+            <NavLink className="nav-link" to="/about">
+              О нас
+            </NavLink>
           </div>
         </div>
+
+        <div className="contacts">
+          <h2>Контактная информация</h2>
+          <p>Адрес: Россия, 443081, г. Самара, ул. Губанова, д. 3</p>
+          <p>Почта: info@pla2m.ru</p>
+          <p>
+            Номер телефона: <a href="tel:+78469720222">8 (846) 972-02-22</a>
+          </p>
+        </div>
+
         <ContactUs />
         <div className="addUs">
           <h2>Добавьте нас в контакты</h2>

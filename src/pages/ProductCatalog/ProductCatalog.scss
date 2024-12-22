@@ -39,8 +39,7 @@
       }
 
       h1 {
-        padding-left: 20px;
-        padding-right: 20px;
+        padding: 0 20px;
       }
     }
   }
@@ -84,12 +83,11 @@
   }
 
   .ApplicationArea {
-    height: 650px;
     display: flex;
     align-items: center;
     flex-direction: column;
     background-color: var(--white);
-    padding: 28px 110px 19px;
+    padding: 28px 110px;
 
     .ApplicationArea-title {
       display: flex;
@@ -103,30 +101,19 @@
     }
 
     .areas {
-      display: flex;
-      align-items: center;
-      text-align: right;
+      display: grid;
+      grid-template-areas:
+        "a c d"
+        "b c d";
       gap: 50px;
 
-      .left {
-        display: flex;
-        flex-direction: column;
-        gap: 55px;
-      }
-
-      .right {
-        text-align: left;
-        align-self: center;
-
-        .text {
-          animation: appear-r linear;
-          animation-timeline: view();
-          animation-range: entry 0 cover 40%;
-        }
+      .left-1 {
+        grid-area: a;
       }
 
       .text {
         max-width: 255px;
+        text-align: right;
 
         .step {
           font-size: 26px;
@@ -141,14 +128,33 @@
         animation-timeline: view();
         animation-range: entry 0 cover 40%;
       }
-    }
 
-    img {
-      max-width: 100%;
-      height: auto;
+      .left-2 {
+        grid-area: b;
+      }
 
-      min-width: 367px;
-      max-height: 447px;
+      img {
+        grid-area: c;
+
+        max-width: 100%;
+        height: auto;
+
+        min-width: 367px;
+        max-height: 447px;
+      }
+
+      .right-3 {
+        grid-area: d;
+        align-content: center;
+
+        &.text {
+          text-align: left;
+
+          animation: appear-r linear;
+          animation-timeline: view();
+          animation-range: entry 0 cover 40%;
+        }
+      }
     }
   }
 
@@ -287,10 +293,6 @@
 
       .presentation {
         background-image: url("../../assets/images/presentation.jpg");
-
-        img {
-          width: 100%;
-        }
       }
 
       .article {
@@ -375,5 +377,206 @@
   to {
     opacity: 1;
     transform: translateX(0px);
+  }
+}
+
+@media (max-width: 1030px) {
+  .ProductCatalog {
+    .ProductCatalog-header {
+      .ProductCatalog-title {
+        right: calc(1%);
+        left: auto;
+      }
+    }
+
+    .AboutTechnology {
+      height: auto;
+      padding: 47px 10px;
+    }
+
+    .ApplicationArea {
+      padding: 14px 55px;
+    }
+
+    .HeatGenerating {
+      flex-direction: column-reverse;
+      align-items: center;
+      padding: 30px;
+      gap: 15px;
+
+      .HeatGenerating-img {
+        height: 460px;
+        max-width: 670px;
+      }
+
+      .HeatGenerating-text {
+        width: auto;
+      }
+    }
+
+    .IncreasedOilAmount {
+      padding: 33px 40px 28px;
+
+      .IncreasedOilAmount-text {
+        padding: 10px;
+      }
+    }
+
+    .AdditionalMaterials {
+      .materials {
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .ProductCatalog {
+    .ApplicationArea {
+      .areas {
+        grid-template-areas:
+          "a c"
+          "d c"
+          "b c";
+
+        img {
+          align-self: center;
+        }
+
+        .right-3 {
+          &.text {
+            text-align: right;
+
+            animation: appear linear;
+            animation-timeline: view();
+            animation-range: entry 0 cover 40%;
+          }
+        }
+      }
+    }
+
+    .IncreasedOilAmount {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      gap: 10px;
+
+      img {
+        width: 100%;
+        max-width: 670px;
+        position: unset;
+      }
+
+      .IncreasedOilAmount-text {
+        max-width: 670px;
+        width: 100%;
+        height: auto;
+        position: unset;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .ProductCatalog {
+    h1 {
+      text-align: center;
+    }
+
+    .ApplicationArea {
+      .ApplicationArea-title {
+        .ApplicationArea-description {
+          text-align: center;
+        }
+      }
+      .areas {
+        grid-template-areas:
+          "a"
+          "d"
+          "b"
+          "c";
+
+        .text {
+          width: 100%;
+          max-width: 384px;
+          text-align: center;
+        }
+
+        .right-3 {
+          &.text {
+            text-align: center;
+          }
+        }
+      }
+    }
+
+    .HeatGenerating {
+      h1 {
+        text-align: left;
+      }
+
+      .HeatGenerating-img {
+        height: 230px;
+        max-width: 335px;
+      }
+    }
+
+    .IncreasedOilAmount {
+      img {
+        height: 230px;
+        max-width: 335px;
+      }
+    }
+
+    .AdditionalMaterials {
+      .materials {
+        .presentation,
+        .article {
+          .text {
+            left: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .ProductCatalog {
+    .ProductCatalog-header {
+      .ProductCatalog-title {
+        width: 100%;
+        right: auto;
+        left: auto;
+        text-align: center;
+      }
+    }
+
+    .KeyBenefits {
+      .KeyBenefits-list {
+        padding: 18px 0 25px;
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .ApplicationArea {
+      padding: 14px 10px;
+    }
+
+    .AdditionalMaterials {
+      .materials {
+        .presentation,
+        .article {
+          height: 300px;
+
+          .text {
+            bottom: 50px;
+            p {
+              width: auto;
+            }
+          }
+        }
+      }
+    }
   }
 }

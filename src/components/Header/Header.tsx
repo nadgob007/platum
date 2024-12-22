@@ -16,6 +16,22 @@ export const Header = () => {
                 <NavLink  className="nav-link" to='/contacts'> Контакты </NavLink>
                 <NavLink  className="nav-link" to='/about'> О нас </NavLink>
             </div>
+            <nav role="navigation">
+                <div className="menuToggle">
+                    <input type="checkbox" />
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                    <ul className="menu">
+                        <a href="/"><li>Главная</li></a>
+                        <a href="/ProductCatalog"><li>ТХВ РС</li></a>
+                        <a href="/contacts"><li>Контакты</li></a>
+                        <a href="/about"><li>О нас</li></a>
+                    </ul>
+                </div>
+            </nav>
         </div>
     </header>
 }

@@ -1,9 +1,10 @@
 .contactUs {
+  grid-area: c;
   max-width: 458px;
   justify-self: center;
 
   .contactUs-form {
-    width: 459px;
+    max-width: 459px;
     padding: 29px 32px 37px 32px;
     box-shadow: 0px 7px 31px 17px var(--black2);
     display: flex;
@@ -20,7 +21,7 @@
 
       box-sizing: border-box !important;
 
-      background-color: var(--black);
+      background-color: transparent;
 
       border-color: var(--gray2);
       border-style: solid;

@@ -83,13 +83,12 @@
     }
 
     &__img {
-      width: 639px;
-      height: 468px;
+      max-width: 639px;
+      max-height: 468px;
 
       img {
-        width: 639px;
-        height: 468px;
-        object-fit: cover;
+        max-width: 100%;
+        height: auto;
       }
     }
 
@@ -116,10 +115,7 @@
 
     padding: 46px 0 45px;
 
-    background-image: linear-gradient(
-        var(--gray4),
-        var(--gray5)
-      ),
+    background-image: linear-gradient(var(--gray4), var(--gray5)),
       url(../../assets/images/molecules.jpeg);
     background-size: cover;
 
@@ -128,11 +124,81 @@
     }
 
     &__list {
+      width: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
       gap: 60px;
+    }
+  }
+}
+
+@media (max-width: 1080px) {
+  .Home {
+    .OilRecovery {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+
+      &__text {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h2 {
+          text-align: center;
+        }
+
+        p {
+          text-align: center;
+        }
+
+        button {
+          justify-self: center;
+        }
+      }
+    }
+
+    .Articles {
+      padding: 46px 10px 45px;
+
+      h1 {
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .Home {
+    .Technology {
+      &__text {
+        padding: 10px;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .Home {
+    .Technology {
+
+      &__wave {
+        svg {
+          min-height: 40px;
+        }
+      }
+    }
+    .OilRecovery {
+      padding: 21px 10px 32px;
+      &__text {
+        button {
+          width: 100%;
+        }
+      }
     }
   }
 }
