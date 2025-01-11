@@ -19,7 +19,7 @@
       max-width: 247px;
 
       h2 {
-        color: #06477e;
+        color: var(--secondary);
         font-size: 26px;
         font-weight: 400;
       }
@@ -35,9 +35,39 @@
     width: 980px;
 
     iframe {
-      height: 370px;
-      width: 980px;
+      height: 100%;
+      width: 100%;
       border: 1px solid;
+      filter: grayscale(100%);
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .Contacts {
+    .contactList {
+      margin-bottom: 20px;
+    }
+
+    .map {
+      width: 100%;
+      padding: 0 20px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .Contacts {
+    h1 {
+      margin-bottom: 66px;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .Contacts {
+    .contactList {
+      flex-direction: column;
     }
   }
 }

@@ -1,18 +1,12 @@
-import "./ProductCatalog.scss";
-import TestTube from "../../assets/images/testTube.jpg";
-
-import worker from "../../assets/icons/worker.png";
-import tube from "../../assets/icons/tube.png";
-import tube2 from "../../assets/icons/tube2.png";
-import rig from "../../assets/icons/rig.png";
-import drop from "../../assets/icons/drop.png";
-import car from "../../assets/icons/car.png";
-
-import oil from "../../assets/images/oil.jpg";
-
-import drops from "../../assets/images/drops.jpg";
 import { useInView } from "react-intersection-observer";
+import { Benefit, BENEFITS } from "../../components/Benefit/Benefit";
+
+import TestTube from "../../assets/images/testTube.jpg";
+import oil from "../../assets/images/oil.jpg";
+import drops from "../../assets/images/drops.jpg";
 import tank from "../../assets/images/tank.jpg";
+
+import "./ProductCatalog.scss";
 
 export const ProductCatalog = () => {
   document.title = `ТХВ РС | PLATUM`;
@@ -32,11 +26,9 @@ export const ProductCatalog = () => {
         </div>
       </div>
 
-      <div className="aboutTechnology">
+      <section className="AboutTechnology">
         <h1>Подробнее о технологии</h1>
-        <hr
-          style={{ height: "5px", width: "60px", color: "rgb(85, 85, 85)" }}
-        />
+        <hr className="grey-line" />
         <p>
           Технология термохимического воздействия на пласт с использованием
           разогревающего состава представляет собой передовой метод обработки
@@ -52,113 +44,72 @@ export const ProductCatalog = () => {
           пластом, а также для регулирования процесса разработки и повышения
           нефтеотдачи неоднородных по проницаемости пластов.
         </p>
+      </section>
+
+      <div className="divider-scroll-img">
+        <div className="banner banner-inView">
+          <img src={TestTube} alt="пробирка"></img>
+        </div>
       </div>
 
-      <section className="window">
-        <div className="banner1 inView">
-          <img src={TestTube} alt="пробирка"></img>
+      <section className="KeyBenefits">
+        <h1>Ключевые преимущества</h1>
+        <hr className="grey-line" />
+
+        <div className="KeyBenefits-list">
+          {BENEFITS.map((benefit, index) => (
+            <Benefit key={index} benefit={benefit} />
+          ))}
         </div>
       </section>
 
-      <div className="KeyBenefits">
-        <h1>Ключевые преимущества</h1>
-        <hr
-          style={{
-            height: "5px",
-            width: "60px",
-            color: "rgb(85, 85, 85)",
-            marginBottom: 36,
-          }}
-        />
-
-        <div className="Benefits">
-          <div className="Benefit">
-            <img src={worker} alt="мужчина"></img>
-            <p>Бесподходный метод</p>
-          </div>
-          <div className="Benefit">
-            <img src={tube} alt="пробирка"></img>
-            <p>
-              Энергетическая способность состава при его разложении составляет
-              от 2х до 6 МДж/кг
-            </p>
-          </div>
-          <div className="Benefit">
-            <img src={tube2} alt="круглая пробирка"></img>
-            <p>Органические компоненты состава</p>
-          </div>
-          <div className="Benefit">
-            <img src={rig} alt="вышка"></img>
-            <p>Отсутствует выделение газа</p>
-          </div>
-          <div className="Benefit">
-            <img src={car} alt="машина"></img>
-            <p>Нет необходимости в откачке продуктов реакции</p>
-          </div>
-          <div className="Benefit">
-            <img src={drop} alt="капля"></img>
-            <p>Не обводняет пласт</p>
-          </div>
-        </div>
-      </div>
-
-      <div className="ApplicationArea">
-        <h1>Область применения ТХВ РС</h1>
-        <hr
-          style={{
-            height: "5px",
-            width: "60px",
-            color: "rgb(85, 85, 85)",
-            marginBottom: 36,
-          }}
-        />
-
+      <section className="ApplicationArea">
         <div className="ApplicationArea-title">
-          Месторождения высоковязкой и битуминозной нефти, где необходимо:
+          <h1>Область применения ТХВ РС</h1>
+          <hr className="grey-line" />
+          <div className="ApplicationArea-description">
+            Месторождения высоковязкой и битуминозной нефти, где необходимо:
+          </div>
         </div>
 
         <div className="areas">
-          <div className="left">
-            <div className="text">
-              <div className="step">1</div>
-              <p>
-                Проведение работ по активации или возобновлению работы нефтяных
-                скважин
-              </p>
-            </div>
-            <div className="text">
-              <div className="step">3</div>
-              <p>
-                Реализация технологии на любом из типов коллектора продуктивного
-                пласта месторождения
-              </p>
-            </div>
+          <div className="text left-1">
+            <div className="step">1</div>
+            <p>
+              Проведение работ по активации или возобновлению работы нефтяных
+              скважин
+            </p>
+          </div>
+
+          <div className="text left-2">
+            <div className="step">3</div>
+            <p>
+              Реализация технологии на любом из типов коллектора продуктивного
+              пласта месторождения
+            </p>
           </div>
 
           <img src={oil} alt={"битуминозная нефть"}></img>
 
-          <div className="right">
-            <div className="text">
-              <div className="step">2</div>
-              <p>
-                Регулирование процесса разработки и повышение нефтеотдачи
-                неоднородных по проницаемости пластов
-              </p>
-            </div>
+          <div className="text right-3">
+            <div className="step">2</div>
+            <p>
+              Регулирование процесса разработки и повышение нефтеотдачи
+              неоднородных по проницаемости пластов
+            </p>
           </div>
+          
         </div>
-      </div>
+      </section>
 
-      <div className="HeatGenerating">
-        <div className="reagent-img">
-          {/* <img src={yellowTubeFull} alt="теплогенерирующая композиция" /> */}
-        </div>
-        <div className="reagent">
-          <div className="reagent-title">
+      <section className="HeatGenerating">
+        <div className="HeatGenerating-img"></div>
+        <div className="HeatGenerating-text">
+          <div className="HeatGenerating-title">
             <h2>ТЕПЛОГЕНЕРИРУЮЩАЯ КОМПОЗИЦИЯ</h2>
             <h1>ТХВ РЕАГЕНТ А</h1>
           </div>
-          <div className="reagent-text">
+          <div className="HeatGenerating-description">
             <p>
               ТХВ Реагент А является основным агентом в процессе обработки
               призабойной зоны посредством технологии ТХВ РС. Экзотермическая
@@ -178,19 +129,19 @@ export const ProductCatalog = () => {
             </p>
           </div>
         </div>
-      </div>
-
-      <section ref={ref} className="window">
-        <div className={`banner2 ${inView ? "inView" : ""}`}>
-          {inView && <img src={drops} alt="капли"></img>}
-        </div>
       </section>
 
-      <div className="IncreasedOilAmount">
+      <div className="divider-scroll-img" ref={ref}>
+        <div className={`banner ${inView ? "banner-inView" : ""}`}>
+          {inView && <img src={drops} alt="капли"></img>}
+        </div>
+      </div>
+
+      <section className="IncreasedOilAmount">
         <img src={tank} alt="нефтянная цистерна" />
 
-        <div className="text-background">
-          <div className="text">
+        <div className="IncreasedOilAmount-text">
+          <div className="IncreasedOilAmount-description">
             <h1>Повышение нефтеодачи</h1>
             <ul>
               <li>
@@ -215,12 +166,15 @@ export const ProductCatalog = () => {
             </ul>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div className="AdditionalMaterials">
-        <div className="title">
+      <section className="AdditionalMaterials">
+        <div className="AdditionalMaterials-title">
           <h1>Дополнительные материалы</h1>
-          <p>для ознакомления</p>
+          <hr className="grey-line" />
+          <div className="AdditionalMaterials-description">
+            для ознакомления
+          </div>
         </div>
 
         <div className="materials">
@@ -252,7 +206,7 @@ export const ProductCatalog = () => {
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 };

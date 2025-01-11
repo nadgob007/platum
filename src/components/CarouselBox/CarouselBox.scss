@@ -1,31 +1,50 @@
 .CarouselBox {
+  height: 600px;
+
+  .carousel-title {
+    position: absolute;
+    z-index: 1;
+    top: 130px;
+    left: calc(61%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 392px;
+
+    h1 {
+      padding: 0 20px;
+    }
+  }
+
+  .carousel-item {
     height: 600px;
+    width: 100%;
 
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 50% 50%;
+    }
+  }
+}
+
+@media (max-width: 1030px) {
+  .CarouselBox {
     .carousel-title {
-        position: absolute;
-        z-index: 1;
-        top: 130px;
-        left: calc(61%);
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        width: 392px;
-
-        h1 {
-            padding-left: 20px;
-            padding-right: 20px;
-        }
+      right: calc(1%);
+      left: auto;
     }
+  }
+}
 
-    .carousel-item {
-        height: 600px;
-        width: 100%;
-
-        img {
-            width: 100%;
-            height: 600px;
-            object-fit: cover;
-            object-position: 50% 50%;
-        }
+@media (max-width: 425px) {
+  .CarouselBox {
+    .carousel-title {
+      width: 100%;
+      right: auto;
+      left: auto;
+      text-align: center;
     }
+  }
 }

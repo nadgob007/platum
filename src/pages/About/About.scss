@@ -3,9 +3,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
-  .aboutCompany {
-    width: 880px;
+
+  .About__text {
+    max-width: 880px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -16,9 +16,9 @@
       margin-bottom: 20px;
     }
 
-    .text {
+    .About__description {
       p {
-        color: #555555;
+        color: var(--gray);
         font-size: 15px;
         line-height: 1.3em;
         letter-spacing: 0em;
@@ -37,6 +37,30 @@
       width: 100%;
       height: 502px;
       object-fit: cover;
+    }
+  }
+}
+
+@media (max-width: 1080px) {
+  .About {
+    .About__text {
+      padding: 60px 10px 50px;
+    }
+
+    .worker {
+      height: auto;
+  
+      img {
+        height: auto;
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .About {
+    .About__text {
+      padding: 30px 10px 25px;
     }
   }
 }

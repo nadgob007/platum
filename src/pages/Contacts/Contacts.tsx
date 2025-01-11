@@ -1,7 +1,7 @@
 import "./Contacts.scss";
 
 export const Contacts = () => {
-  document.title = `Контакты | PLATUM`
+  document.title = `Контакты | PLATUM`;
 
   return (
     <div className="Contacts">
@@ -10,9 +10,7 @@ export const Contacts = () => {
       <div className="contactList">
         <div className="item">
           <h2>Адрес</h2>
-          <p>
-            Россия, 443081, г. Самара, ул. Советской армии, дом 185, офис 23
-          </p>
+          <p>Россия, 443081, г. Самара, ул. Губанова, д. 3</p>
         </div>
         <div className="item">
           <h2>Телефон</h2>
@@ -31,10 +29,7 @@ export const Contacts = () => {
       <section className="map">
         <iframe
           title="Map"
-          src="https://yandex.ru/map-widget/v1/?um=constructor%3Acd5ef7248575fff897b57ce8dd91e4017421ab0c099984874e8f311c7dfbaa29&amp;source=constructor"
-          width="100%"
-          height="300"
-          style={{filter: 'grayscale(100%)'}}
+          src="https://yandex.ru/map-widget/v1/?um=constructor%3A9e731a9076708d832173fcdef673d9aea3eedf7250100137d00d6685a90fd05c&amp;source=constructor"
         ></iframe>
       </section>
     </div>

@@ -1,33 +1,114 @@
 :root {
-  --primary-font: normal normal normal 28px/1.38em brandon-grot-w01-light,
-    brandon-grot-w05-light, sans-serif;
-  --grey: rgb(85, 85, 85);
-  --red: rgb(252, 0, 0);
+  // font-familys
+  --font-family1: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  --font-family2: avenir-lt-w01_35-light1475496, avenir-lt-w05_35-light,
+    sans-serif;
+  --font-family3: brandon-grot-w01-light, brandon-grot-w05-light, sans-serif;
+  --font-family4: bai jamjuree, sans-serif;
+
+  // colors
+  --primary: #fc0000;
+  --secondary: #06477e;
+
+  --turquoise: #36aebf;
+  --light-blue: #648ada;
+
+  --gray1: rgb(213, 213, 213);
+  --gray2: rgba(227, 227, 227, 0.788);
+  --gray3: rgb(170, 170, 170);
+  --gray4: rgba(255, 255, 255, 0.534);
+  --gray5: rgba(255, 255, 255, 0.4);
+  --gray6: rgba(213, 213, 213, 0.541);
+  --gray7: rgb(128, 134, 138);
+  --gray8: rgb(128, 128, 128);
+
+  --gray: #555555;
+  --gray-dark: #2f2e2e;
+
   --white: #ffffff;
+  --white2: #fafafa;
+
+  --black: rgb(0, 0, 0);
+  --black2: rgba(0, 0, 0, 0.13);
+  --black3: rgba(0, 0, 0, 0.5);
 }
+
+/*
+  TODO:
+  - анимацию в блоке "Область применения ТХВ РС" переделать на другую, 
+    так ка текущая не работает при деплое
+  - изображение волны в ProductCatalog-header попробовать заменить на img
+  - картинки в карусели менять при изменении размера экрана
+*/
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: var(--font-family1);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
   h1 {
-    font: 88px/1.2em brandon-grot-w01-light, brandon-grot-w05-light, sans-serif;
+    font-family: var(--font-family3);
     font-size: 36px;
-    color: var(--red);
+    color: var(--primary);
   }
 
   p {
-    color: var(--grey);
+    color: var(--gray);
     font-size: 19px;
     line-height: 1.8em;
   }
+
+  button {
+    border: none;
+    padding: 0;
+
+    color: var(--white);
+    font-size: 20px;
+    font-family: var(--font-family2);
+    letter-spacing: 0.1em;
+
+    cursor: pointer;
+    touch-action: manipulation;
+    transition: all 0.2s ease, visibility 0s;
+  }
+
+  .grey-line {
+    height: 5px;
+    width: 60px;
+    color: var(--gray);
+  }
+
+  .divider-scroll-img {
+    .banner {
+      width: 100%;
+      background-color: var(--white);
+      transform: translate3d(0px, 0px, 0px);
+      z-index: -1;
+
+      img {
+        width: 100%;
+        height: 953px;
+        object-fit: cover;
+        position: relative;
+      }
+
+      &-inView {
+        top: 0px;
+        position: fixed;
+      }
+    }
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+@media (max-width: 900px) {
+  body {
+    .divider-scroll-img {
+      .banner {
+        width: 100%;
+      }
+    }
+  }
 }

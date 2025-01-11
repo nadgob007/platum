@@ -1,26 +1,17 @@
 .ProductCatalog {
-  .window {
+  .divider-scroll-img {
     height: 300px;
 
-    .banner1,
-    .banner2 {
-      width: 100%;
-      background-color: white;
-      transform: translate3d(0px, 0px, 0px);
-      z-index: -1;
-
-      img {
-        width: 100%;
-        height: 953px;
-        object-fit: cover;
-        position: relative;
-      }
-
+    .banner {
       &.inView {
         top: 107px;
-        position: fixed;
       }
     }
+  }
+
+  .ApplicationArea-description,
+  .AdditionalMaterials-description {
+    font-size: 18px;
   }
 
   .ProductCatalog-header {
@@ -44,17 +35,16 @@
       width: 392px;
 
       p {
-        color: #ffffff;
+        color: var(--white);
       }
 
       h1 {
-        padding-left: 20px;
-        padding-right: 20px;
+        padding: 0 20px;
       }
     }
   }
 
-  .aboutTechnology {
+  .AboutTechnology {
     height: 600px;
     display: flex;
     flex-direction: column;
@@ -62,7 +52,7 @@
     align-items: center;
     padding: 94px calc((100% - 980px) * 0.5);
     text-align: justify;
-    background-color: rgba(213, 213, 213, 1);
+    background-color: var(--gray1);
 
     p {
       font-size: 18px;
@@ -80,77 +70,54 @@
       margin-top: 59px;
     }
 
-    .Benefits {
+    .grey-line {
+      margin-bottom: 36px;
+    }
+
+    .KeyBenefits-list {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       padding: 36px 0 55px;
-      background-color: rgba(213, 213, 213, 1);
-
-      .Benefit {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        text-align: center;
-
-        p {
-          color: #06477e;
-        }
-
-        img {
-          width: 80px;
-          height: 80px;
-        }
-      }
+      background-color: var(--gray1);
     }
   }
 
   .ApplicationArea {
-    height: 650px;
     display: flex;
     align-items: center;
     flex-direction: column;
     background-color: var(--white);
-    padding: 28px 110px 19px;
-
-    h1 {
-      margin-top: 0;
-    }
+    padding: 28px 110px;
 
     .ApplicationArea-title {
-      margin-bottom: 21px;
-      font-size: 18px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      padding-bottom: 21px;
+
+      h1 {
+        margin-top: 0;
+      }
     }
 
     .areas {
-      display: flex;
-      align-items: center;
-      text-align: right;
+      display: grid;
+      grid-template-areas:
+        "a c d"
+        "b c d";
       gap: 50px;
 
-      .left {
-        display: flex;
-        flex-direction: column;
-        gap: 55px;
-      }
-
-      .right {
-        text-align: left;
-        align-self: center;
-
-        .text {
-          animation: appear-r linear;
-          animation-timeline: view();
-          animation-range: entry 0 cover 40%;
-        }
+      .left-1 {
+        grid-area: a;
       }
 
       .text {
         max-width: 255px;
+        text-align: right;
 
         .step {
           font-size: 26px;
-          color: #06477e;
+          color: var(--secondary);
         }
 
         p {
@@ -161,14 +128,33 @@
         animation-timeline: view();
         animation-range: entry 0 cover 40%;
       }
-    }
 
-    img {
-      max-width: 100%;
-      height: auto;
+      .left-2 {
+        grid-area: b;
+      }
 
-      min-width: 367px;
-      max-height: 447px;
+      img {
+        grid-area: c;
+
+        max-width: 100%;
+        height: auto;
+
+        min-width: 367px;
+        max-height: 447px;
+      }
+
+      .right-3 {
+        grid-area: d;
+        align-content: center;
+
+        &.text {
+          text-align: left;
+
+          animation: appear-r linear;
+          animation-timeline: view();
+          animation-range: entry 0 cover 40%;
+        }
+      }
     }
   }
 
@@ -178,10 +164,10 @@
     display: flex;
     justify-content: center;
     gap: 30px;
-    background-color: rgba(213, 213, 213, 1);
+    background-color: var(--gray1);
     padding: 60px;
 
-    .reagent-img {
+    .HeatGenerating-img {
       width: 100%;
       max-width: 718px;
       display: flex;
@@ -200,21 +186,21 @@
       }
     }
 
-    .reagent {
+    .HeatGenerating-text {
       width: 100%;
       display: flex;
       align-items: center;
       flex-direction: column;
-      background-color: #ffffff;
-      padding: 15px 15px 0 15px;
+      background-color: var(--white);
+      padding: 15px;
 
-      .reagent-title {
+      .HeatGenerating-title {
         max-width: 640px;
         padding: 30px 0 49px;
 
         h2 {
           margin-bottom: 10px;
-          color: #06477e;
+          color: var(--secondary);
         }
 
         h1 {
@@ -222,11 +208,11 @@
         }
       }
 
-      .reagent-text {
+      .HeatGenerating-description {
         text-align: justify;
+        max-width: 640px;
 
         p {
-          max-width: 640px;
           font-size: 16px;
           line-height: 1.5em;
         }
@@ -239,7 +225,7 @@
     padding: 67px 80px 56px;
     position: relative;
 
-    background-color: rgba(213, 213, 213, 1);
+    background-color: var(--gray1);
 
     img {
       position: absolute;
@@ -250,7 +236,7 @@
       width: calc(calc(100% - 160px) * 0.65);
     }
 
-    .text-background {
+    .IncreasedOilAmount-text {
       height: 466px;
       width: calc(calc(100% - 160px) * 0.65);
 
@@ -262,9 +248,9 @@
       justify-content: center;
 
       // padding: 0px calc((100% - 1200px) * 0.5) 21px calc((100% - 1200px) * 0.5);
-      background-color: #ffffff;
+      background-color: var(--white);
 
-      .text {
+      .IncreasedOilAmount-description {
         width: 620px;
 
         h1 {
@@ -280,7 +266,7 @@
           margin: 0;
 
           li {
-            color: rgb(85, 85, 85);
+            color: var(--gray);
             list-style-type: none;
             text-align: justify;
           }
@@ -294,17 +280,12 @@
   }
 
   .AdditionalMaterials {
-    .title {
-      height: 150px;
+    .AdditionalMaterials-title {
       display: flex;
       flex-direction: column;
       align-items: center;
-      background-color: #ffffff;
+      background-color: var(--white);
       padding: 31px 0 23px;
-
-      p {
-        font-size: 18px;
-      }
     }
 
     .materials {
@@ -312,10 +293,6 @@
 
       .presentation {
         background-image: url("../../assets/images/presentation.jpg");
-
-        img {
-          width: 100%;
-        }
       }
 
       .article {
@@ -333,18 +310,15 @@
           position: absolute;
           left: 60px;
           bottom: 160px;
-          color: #ffffff;
+          color: var(--white);
 
           p {
             width: 380px;
-
-            color: #fafafa;
+            color: var(--white2);
             font-size: 16px;
             line-height: 1.41em;
-            text-shadow: rgba(0, 0, 0, 0.498039) -1px -1px 0px,
-              rgba(0, 0, 0, 0.498039) -1px 1px 0px,
-              rgba(0, 0, 0, 0.498039) 1px 1px 0px,
-              rgba(0, 0, 0, 0.498039) 1px -1px 0px;
+            text-shadow: var(--black3) -1px -1px 0px, var(--black3) -1px 1px 0px,
+              var(--black3) 1px 1px 0px, var(--black3) 1px -1px 0px;
           }
 
           h3 {
@@ -354,28 +328,27 @@
 
           .download {
             text-decoration: none;
+            display: block;
+            width: fit-content;
 
             .button-download {
-              width: fit-content;
               height: 45px;
               padding: 0 42px;
 
               display: flex;
               align-items: center;
 
-              text-align: center;
-
-              color: #ffffff;
+              color: var(--white);
               background-color: transparent;
-              border: 1px solid #ffffff;
+              border: 1px solid var(--white);
               border-radius: 30px;
 
               transition: 0.4s ease 0s;
               cursor: pointer;
 
               &:hover {
-                background-color: #fafafa;
-                color: #555555;
+                background-color: var(--white2);
+                color: var(--gray);
               }
             }
           }
@@ -404,5 +377,206 @@
   to {
     opacity: 1;
     transform: translateX(0px);
+  }
+}
+
+@media (max-width: 1030px) {
+  .ProductCatalog {
+    .ProductCatalog-header {
+      .ProductCatalog-title {
+        right: calc(1%);
+        left: auto;
+      }
+    }
+
+    .AboutTechnology {
+      height: auto;
+      padding: 47px 10px;
+    }
+
+    .ApplicationArea {
+      padding: 14px 55px;
+    }
+
+    .HeatGenerating {
+      flex-direction: column-reverse;
+      align-items: center;
+      padding: 30px;
+      gap: 15px;
+
+      .HeatGenerating-img {
+        height: 460px;
+        max-width: 670px;
+      }
+
+      .HeatGenerating-text {
+        width: auto;
+      }
+    }
+
+    .IncreasedOilAmount {
+      padding: 33px 40px 28px;
+
+      .IncreasedOilAmount-text {
+        padding: 10px;
+      }
+    }
+
+    .AdditionalMaterials {
+      .materials {
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .ProductCatalog {
+    .ApplicationArea {
+      .areas {
+        grid-template-areas:
+          "a c"
+          "d c"
+          "b c";
+
+        img {
+          align-self: center;
+        }
+
+        .right-3 {
+          &.text {
+            text-align: right;
+
+            animation: appear linear;
+            animation-timeline: view();
+            animation-range: entry 0 cover 40%;
+          }
+        }
+      }
+    }
+
+    .IncreasedOilAmount {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      gap: 10px;
+
+      img {
+        width: 100%;
+        max-width: 670px;
+        position: unset;
+      }
+
+      .IncreasedOilAmount-text {
+        max-width: 670px;
+        width: 100%;
+        height: auto;
+        position: unset;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .ProductCatalog {
+    h1 {
+      text-align: center;
+    }
+
+    .ApplicationArea {
+      .ApplicationArea-title {
+        .ApplicationArea-description {
+          text-align: center;
+        }
+      }
+      .areas {
+        grid-template-areas:
+          "a"
+          "d"
+          "b"
+          "c";
+
+        .text {
+          width: 100%;
+          max-width: 384px;
+          text-align: center;
+        }
+
+        .right-3 {
+          &.text {
+            text-align: center;
+          }
+        }
+      }
+    }
+
+    .HeatGenerating {
+      h1 {
+        text-align: left;
+      }
+
+      .HeatGenerating-img {
+        height: 230px;
+        max-width: 335px;
+      }
+    }
+
+    .IncreasedOilAmount {
+      img {
+        height: 230px;
+        max-width: 335px;
+      }
+    }
+
+    .AdditionalMaterials {
+      .materials {
+        .presentation,
+        .article {
+          .text {
+            left: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .ProductCatalog {
+    .ProductCatalog-header {
+      .ProductCatalog-title {
+        width: 100%;
+        right: auto;
+        left: auto;
+        text-align: center;
+      }
+    }
+
+    .KeyBenefits {
+      .KeyBenefits-list {
+        padding: 18px 0 25px;
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .ApplicationArea {
+      padding: 14px 10px;
+    }
+
+    .AdditionalMaterials {
+      .materials {
+        .presentation,
+        .article {
+          height: 300px;
+
+          .text {
+            bottom: 50px;
+            p {
+              width: auto;
+            }
+          }
+        }
+      }
+    }
   }
 }
